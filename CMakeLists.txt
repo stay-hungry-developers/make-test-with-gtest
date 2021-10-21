@@ -23,7 +23,7 @@ ExternalProject_Get_Property(gtest source_dir binary_dir)
 add_executable(run_test ./tests/test_src.cpp)
 
 add_dependencies(run_test gtest)
-include_directories(${source_dir}/include)
+include_directories(${source_dir}/googletest/include)
 target_link_libraries(run_test ${binary_dir}/lib/libgtest.a)
 target_link_libraries(run_test ${binary_dir}/lib/libgtest_main.a)
 target_link_libraries(run_test MyLibrary)
